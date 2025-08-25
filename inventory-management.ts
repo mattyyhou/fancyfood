@@ -11,4 +11,8 @@ async function main() {
     const inventoryData = await fileReader.readCSV(inventoryFile);
     const supplierData = await FileReader.readCSV(supplierFile);
 
+    const inventoryManager = new InventoryManager(inventoryData, supplierData, currentDate);
+    inventoryManager.processInventory();
 }
+
+main().catch(console.error);
