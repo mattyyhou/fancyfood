@@ -8,6 +8,9 @@ export class FileReader {
             .trim() //remove whitespace from both ends of string
             .split('\n') //split string object into an array
             .map(line => line.split(',')); //create new array based on results of function
+        } catch (error) {
+            console.error(`Error reading file ${filePath}:`, error);
+            return [];
         }
     }
 }
