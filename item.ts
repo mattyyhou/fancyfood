@@ -38,5 +38,19 @@ export class Item {
         const daysToExpiry = Math.ceil(
             (adjustedExpiry.getTime() - currentDate.getTime()) / (1000 * 60 * 60 * 24)
         );
+
+        switch(this.category) {
+            case 'Dairy':
+                if (daysToExpiry < 4) return this.price * 0.5;
+                break;
+            case 'Canned Goods':
+                const monthsToExpiry = daysToExpiry / 30;
+                if(monthsToExpiry < 3) return this.price * 0.75;
+                break;
+            case 'Vegetables':
+                if (daysToExpiry < 3) return this.price * 0.6;
+                break;    
+        }
+        return null;
     }
 }
