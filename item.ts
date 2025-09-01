@@ -25,4 +25,10 @@ export class Item {
         }
         return adjustedDate;
     }
+
+    //Check if the item is expired
+    isExpired(currentDate: Date, supplierQuality: String,): boolean {
+        const adjustedExpiry = this.getAdjustedExpiryDate(supplierQuality);
+        return adjustedExpiry < currentDate;
+    }
 }
