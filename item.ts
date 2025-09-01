@@ -31,4 +31,12 @@ export class Item {
         const adjustedExpiry = this.getAdjustedExpiryDate(supplierQuality);
         return adjustedExpiry < currentDate;
     }
+
+    //Calculate reduced price based on category and days to expiry
+    getReducedPrice(currentDate: Date, supplierQuality: String): number | null {
+        const adjustedExpiry = this.getAdjustedExpiryDate(supplierQuality);
+        const daysToExpiry = Math.ceil(
+            (adjustedExpiry.getTime() - currentDate.getTime()) / (1000 * 60 * 60 * 24)
+        );
+    }
 }
