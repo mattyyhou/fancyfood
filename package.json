@@ -1,0 +1,23 @@
+{
+  "name": "fancyfood",
+  "version": "1.0.0",
+  "description": "Identify expring foods and reduce price",
+  "main": "index.js",
+  "scripts": {
+    "test": "y"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattyyhou/fancyfood.git"
+  },
+  "keywords": [
+    "fancy",
+    "food"
+  ],
+  "author": "matthew houston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattyyhou/fancyfood/issues"
+  },
+  "homepage": "https://github.com/mattyyhou/fancyfood#readme"
+}
